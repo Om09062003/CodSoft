@@ -4,12 +4,13 @@ public class numberGuess {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
-        int myAnswer = (int) (Math.random() * 100);
+        int myAnswer;
         int userNumber = 0;
         int count = 0;
         int attempts = 0;
         char choice;
         do {
+            myAnswer = (int) (Math.random() * 100);
             do {
                 System.out.print("Guess the number (1-100): ");
                 userNumber = sc.nextInt();
