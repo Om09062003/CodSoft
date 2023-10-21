@@ -8,31 +8,38 @@ public class numberGuess {
         int userNumber = 0;
         int count = 0;
         int attempts = 0;
+        char choice;
         do {
-            System.out.print("Guess the number (1-100): ");
-            userNumber = sc.nextInt();
+            do {
+                System.out.print("Guess the number (1-100): ");
+                userNumber = sc.nextInt();
 
-            if (userNumber == myAnswer) {
-                System.out.println("OHH YESS... Your Number Is Correct! YOU WON!");
-                break;
-            } else if (userNumber > myAnswer) {
-                System.out.println("Your number TOO HIGH try again");
-            } else {
-                System.out.println("Your number is TOO LOW try again");
-            }
+                if (userNumber == myAnswer) {
+                    System.out.println("OHH YESS... Your Number Is Correct! YOU WON!");
+                    break;
+                } else if (userNumber > myAnswer) {
+                    System.out.println("Your number TOO HIGH try again");
+                } else {
+                    System.out.println("Your number is TOO LOW try again");
+                }
 
-            count++;
-            attempts = count + 1;
+                count++;
+                attempts = count + 1;
 
-            if (count == 10) {
-                System.out.println("Attempts are over");
-                break;
-            }
+                if (count == 10) {
+                    System.out.println("Attempts are over");
+                    break;
+                }
 
-        } while (userNumber >= 0);
+            } while (userNumber >= 0);
 
-        System.out.println("Number of times you attempt = " + attempts);
-        System.out.println("The Number is: " + myAnswer);
+            System.out.println("Number of times you attempt = " + attempts);
+            System.out.println("The Number is: " + myAnswer);
+
+            System.out.print("Do you want to play again type Y|y (if dont want to continue press any key and enter): ");
+            choice = sc.next().charAt(0);
+
+        } while (choice == 'Y' || choice == 'y');
 
     }
 }
