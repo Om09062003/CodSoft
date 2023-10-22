@@ -11,7 +11,7 @@ public class gradeCalculator {
         totalSubjects = sc.nextInt();
 
         for (int i = 1; i <= totalSubjects; i++) {
-            System.out.print("Enter the marks of the subject " + i + ": ");
+            System.out.print("Enter the marks of the subject (Out Of 100) " + i + ": ");
             marks = sc.nextInt();
             sum = sum + marks;
         }
